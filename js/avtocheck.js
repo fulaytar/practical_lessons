@@ -61,3 +61,67 @@ for (const book of books) {
 getAllPropValues("name");
 getAllPropValues("quantity");
 getAllPropValues("price"); */
+
+//замикання
+
+/* function createNewSum(n) {
+  return function () {
+    console.log(10 * n);
+  }
+}
+const calc = createNewSum(5);
+calc(); */
+
+/* function createNewNumber(n) {
+  return function (num) {
+    return n + num;
+  }
+}
+const addFive = createNewNumber("Я тут перший");
+console.log(addFive(", а я другий")); //Я тут перший, а я другий */
+
+
+/* function createUrl(domain) {
+  return function (url) {
+   return `http://${url}.${domain}`
+ } 
+}
+
+const comUrl = createUrl("com");
+console.log(comUrl("google")); //http://google.com
+console.log(comUrl("facebook")); //http://facebook.com
+console.log(comUrl("instagram"));//http://instagram.com */
+
+//this
+
+//global this
+/* function hello() {
+  console.log("Hello", this);
+} */
+//hello();
+
+/* const user = {
+  name: "Ivan",
+  city: "Odessa",
+  sayHello: hello,
+};
+
+user.sayHello(); */
+
+
+/* const user = {
+  name: "Ivan",
+  age: 30,
+  sayHelloWindow: hello.bind(window),
+  info: function () {
+    console.log(`Name is ${this.name}`);
+    console.log(`Age is ${this.age}`)
+  }
+}
+user.info(); //виводимо інфу
+
+const Ann = {
+  name: "Anna",
+  age: 23,
+}
+user.info.bind(Ann)(); //це нова функція */
