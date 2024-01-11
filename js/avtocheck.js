@@ -263,3 +263,30 @@ tweets.forEach(
 )
 const tags = tweets.flatMap(t => t.tags);
 console.log(tags); */
+
+
+
+/* const animals = ['elephant', 'tiger', 'emu', 'zebra', 'cat', 'dog', 'eel',
+'rabbit', 'goose', 'earwig'];
+const animalsE = animals.filter(elem => elem[0].toLowerCase()==='z');
+console.log(animalsE);  */
+
+
+/* const numbers = [1, 12, 3, 4, 3, 3, 4, 5];
+const value = [...new Set(numbers)];
+console.log(value);
+
+const message = ['adam', 'mary', 'mary', 'victor', 'mary'];
+const newMessage = [...new Set(message)];
+console.log(newMessage); */
+
+/* const fruitArray = [];
+// Добавляем в fruitArray три элемента.
+// Каждый из этих элементов — массив строк
+fruitArray[0] = ['strawberry', 'blueberry', 'raspberry'];
+fruitArray[1] = ['lime', 'lemon', 'orange', 'grapefruit'];
+fruitArray[2] = ['tangerine', 'apricot', 'peach', 'plum'];
+const fruitList = fruitArray.flat();
+console.log(fruitList); */
+
+
