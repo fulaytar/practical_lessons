@@ -141,3 +141,177 @@ function name(str, litera) {
 }
 console.log(string,name(string,"a"));
 console.log(string,name(string,"b")) */
+
+
+// todo Напиши скрипт, який для об'єкта user послідовно:
+//   - додасть поле mood зі значенням 'happy'
+//   - замінить hobby на 'skydiving'
+//   - замінить значення premium на false
+//   - виводить вміст об'єкта user у форматі ключ:значення,
+// використовуючи Object.keys() і for...of
+
+
+/* const user = {
+  name: 'John',
+  age: 20,
+  hobby: 'tennis',
+  premium: true,
+}
+user.mod = 'happy';
+user.hobby = 'skydiving';
+user.premium = false;
+const keys = Object.keys(user);
+for (const key of keys) {
+  console.log(` ${key} : ${user[key]}`);
+} */
+
+
+// todo У нас є об'єкт, у якому зберігаються заробітні плати команди.
+// Напишіть код для отримання суми усіх зарплат і збережіть його результат у змінній sum
+// Якщо об'єкт salaries порожній, то результат повинен бути 0
+
+
+
+/* const salaries = {
+  Mango: 100,
+  Poly: 160,
+  Ajax: 1470,
+}
+
+let sum = 0;
+for (const key of Object.values(salaries)) {
+  sum += key;
+}
+console.log(sum); */
+
+
+// todo Напишіть функцію calcTotalPrice(stones, stonesName), яка приймає масив об'єктів та рядок із назвою каменя.
+// Функція рахує і повертає загальну вартість каменів з таким іменем, ціною та кількістю з об'єкта
+
+
+
+/* const stonesArray = [
+  { name: 'Ізумруд', price: 1300, quantity: 4 },
+  { name: 'Брилліант', price: 2700, quantity: 6 },
+  { name: 'Сапфір', price: 400, quantity: 7 },
+  { name: 'Щебінь', price: 150, quantity: 100 },
+]
+
+const calcTotalPrice = (stones, stonesName) => {
+  for (const ston of stones) {
+    if (ston.name === stonesName) {
+       console.log(`${ston.name} quantity : ${ston.quantity} , price:${ston.price * ston.quantity}`);
+      break;
+}
+      else {
+      console.log(`не знайдено ${stonesName}`);
+      
+  }
+  }
+}
+calcTotalPrice(stonesArray, 'Щебінь'); */
+
+
+
+// todo Напишіть функцію updateObject, яка приймає об'єкт і повертає новий об'єкт без вказаних параметрів
+// Результат, що очікується ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
+
+
+/* function updateObject(obj, ...keysToRemove) {
+  const updatedObject = {};
+  for (const key in obj) {
+    if (!keysToRemove.includes(key)) {
+      updatedObject[key] = obj[key];
+    }
+  }
+  console.log(updatedObject);
+}
+updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a'); */
+
+
+// Напишіть функцію, яка очистить масив від небажаних значень, таких як false, undefined, порожні рядки, нуль, null
+// Результат, що очікується[0, 1, false, 2, undefined, '', 3, null] => [1, 2, 3]
+
+/* const clean = (arr) => {
+const newArr = [];
+for (const item of arr) {
+    if (item) {
+    newArr.push(item);
+    }
+}
+console.log(newArr);
+}
+clean([0, 1, false, 2, undefined, '', 3, null]) */
+
+//через фільтер
+
+/* const newArr = [0, 1, false, 2, undefined, '', 3, null].filter(item => item);
+console.log(newArr); */
+
+
+
+// Напишіть функцію, яка розвертає масив у зворотньому напрямку.Метод reverse() не використовувати
+const arrNumber = [4, 5, 3, 1, 2]
+
+
+/* const revArr = (arr) => {
+    const result = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        result.push(arr[i])
+    }
+    return result;
+};
+console.log(arrNumber, "початковий масив")
+console.log(revArr(arrNumber),"обернений масив"); 
+*/
+
+
+
+
+// Напишіть функцію, яка повертає новий масив без вказаних значень.Використовуйте примітиви
+// Очікується [1, 2, 3, 1, 2] без [1, 2] => [1,2,3]
+
+
+
+
+
+// Напишіть фукнцію, яка порівнює два масиви і повертає true, якщо вони ідентичні
+// Очікується([1, 2, 3], [1, 2, 3]) => true
+// Очікується([4, 5, 5], [1, 2, 3]) => false
+// Очікується([4, 5, 5,6,7], [1, 2, 3]) => false
+
+/* const result = (arr1, arr2) => {
+    let res;
+    for (const elem of arr1) {
+        if (arr2.includes(elem)) {
+            res =true;
+        } else {
+            res =false;
+        }
+    }
+    return res;
+}
+console.log(result([1, 2, 3], [1, 2, 3]));  //true
+console.log(result([4, 5, 5], [1, 2, 3]));  //false
+console.log(result([4, 5, 5,6,7], [1, 2, 3])); //false */
+
+
+
+
+// Напишіть функцію, яка перетворює глибокий масив в одномірний. Не використовувати array.flat()
+// Очікується[1, 2, [3, 4, [5]]] => [1, 2, 3, 4, 5]
+
+/* const simpleArr = (array) => {
+    return array.reduce((acum, elem) => acum.concat(Array.isArray(elem) ? simpleArr(elem) : elem), []);
+}
+
+console.log(simpleArr([1, 2, [3, 4, [5]]])); // жестока задачка */
+
+
+
+
+
+
+/* const scores = [5, 4, 1, 22, 23, 21, 3]
+console.log(scores.concat(777)) */
+// виведе  [5, 4, 1, 22, 23, 21, 3, 777]
