@@ -289,5 +289,18 @@ fruitArray[2] = ['tangerine', 'apricot', 'peach', 'plum'];
 const fruitList = fruitArray.flat();
 console.log(fruitList); */
 
+/* "use strict";
 
+const customer = {
+  username: "Jacob",
+	sayHello() {
+		console.log(`Hello, ${this.username}!`);
+  }
+};
 
+ // "Hello, Jacob!"
+
+const greet = customer.sayHello.bind(customer);
+
+greet(); 
+ */
