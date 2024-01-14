@@ -134,15 +134,16 @@ else {
 const string2 = 'bcde'
 function name(str, litera) {
     if (str[0] === litera) {
-        return `Так`
+    return `Так`
     } else {
-        return `Немає`
+    return `Немає`
     }
 }
 console.log(string,name(string,"a"));
 console.log(string,name(string,"b")) */
 
 
+//======Завдання 9==========
 // todo Напиши скрипт, який для об'єкта user послідовно:
 //   - додасть поле mood зі значенням 'happy'
 //   - замінить hobby на 'skydiving'
@@ -152,20 +153,20 @@ console.log(string,name(string,"b")) */
 
 
 /* const user = {
-  name: 'John',
-  age: 20,
-  hobby: 'tennis',
-  premium: true,
+name: 'John',
+age: 20,
+hobby: 'tennis',
+premium: true,
 }
 user.mod = 'happy';
 user.hobby = 'skydiving';
 user.premium = false;
 const keys = Object.keys(user);
 for (const key of keys) {
-  console.log(` ${key} : ${user[key]}`);
+console.log(` ${key} : ${user[key]}`);
 } */
 
-
+//======Завдання 10==========
 // todo У нас є об'єкт, у якому зберігаються заробітні плати команди.
 // Напишіть код для отримання суми усіх зарплат і збережіть його результат у змінній sum
 // Якщо об'єкт salaries порожній, то результат повинен бути 0
@@ -173,64 +174,69 @@ for (const key of keys) {
 
 
 /* const salaries = {
-  Mango: 100,
-  Poly: 160,
-  Ajax: 1470,
+Mango: 100,
+Poly: 160,
+Ajax: 1470,
 }
 
 let sum = 0;
 for (const key of Object.values(salaries)) {
-  sum += key;
+sum += key;
 }
 console.log(sum); */
 
 
+//======Завдання 11==========
 // todo Напишіть функцію calcTotalPrice(stones, stonesName), яка приймає масив об'єктів та рядок із назвою каменя.
 // Функція рахує і повертає загальну вартість каменів з таким іменем, ціною та кількістю з об'єкта
 
 
 
 /* const stonesArray = [
-  { name: 'Ізумруд', price: 1300, quantity: 4 },
-  { name: 'Брилліант', price: 2700, quantity: 6 },
-  { name: 'Сапфір', price: 400, quantity: 7 },
-  { name: 'Щебінь', price: 150, quantity: 100 },
+{ name: 'Ізумруд', price: 1300, quantity: 4 },
+{ name: 'Брилліант', price: 2700, quantity: 6 },
+{ name: 'Сапфір', price: 400, quantity: 7 },
+{ name: 'Щебінь', price: 150, quantity: 100 },
 ]
 
 const calcTotalPrice = (stones, stonesName) => {
-  for (const ston of stones) {
+for (const ston of stones) {
     if (ston.name === stonesName) {
        console.log(`${ston.name} quantity : ${ston.quantity} , price:${ston.price * ston.quantity}`);
-      break;
+break;
 }
-      else {
-      console.log(`не знайдено ${stonesName}`);
-      
-  }
-  }
+else {
+console.log(`не знайдено ${stonesName}`);
+
+}
+}
 }
 calcTotalPrice(stonesArray, 'Щебінь'); */
 
 
-
+//======Завдання 12==========
 // todo Напишіть функцію updateObject, яка приймає об'єкт і повертає новий об'єкт без вказаних параметрів
 // Результат, що очікується ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
 
 
 /* function updateObject(obj, ...keysToRemove) {
-  const updatedObject = {};
-  for (const key in obj) {
+const updatedObject = {};
+for (const key in obj) {
     if (!keysToRemove.includes(key)) {
-      updatedObject[key] = obj[key];
+    updatedObject[key] = obj[key];
     }
-  }
-  console.log(updatedObject);
+}
+console.log(updatedObject);
 }
 updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a'); */
 
 
+
+//======Завдання 13==========
 // Напишіть функцію, яка очистить масив від небажаних значень, таких як false, undefined, порожні рядки, нуль, null
 // Результат, що очікується[0, 1, false, 2, undefined, '', 3, null] => [1, 2, 3]
+
+
 
 /* const clean = (arr) => {
 const newArr = [];
@@ -243,15 +249,16 @@ console.log(newArr);
 }
 clean([0, 1, false, 2, undefined, '', 3, null]) */
 
-//через фільтер
 
+
+//через фільтер
 /* const newArr = [0, 1, false, 2, undefined, '', 3, null].filter(item => item);
 console.log(newArr); */
 
 
-
+//======Завдання 14==========
 // Напишіть функцію, яка розвертає масив у зворотньому напрямку.Метод reverse() не використовувати
-const arrNumber = [4, 5, 3, 1, 2]
+//const arrNumber = [4, 5, 3, 1, 2]
 
 
 /* const revArr = (arr) => {
@@ -267,14 +274,14 @@ console.log(revArr(arrNumber),"обернений масив");
 
 
 
-
+//======Завдання 15==========
 // Напишіть функцію, яка повертає новий масив без вказаних значень.Використовуйте примітиви
 // Очікується [1, 2, 3, 1, 2] без [1, 2] => [1,2,3]
 
 
 
 
-
+//======Завдання 16==========
 // Напишіть фукнцію, яка порівнює два масиви і повертає true, якщо вони ідентичні
 // Очікується([1, 2, 3], [1, 2, 3]) => true
 // Очікується([4, 5, 5], [1, 2, 3]) => false
@@ -297,9 +304,10 @@ console.log(result([4, 5, 5,6,7], [1, 2, 3])); //false */
 
 
 
-
+//======Завдання 17==========
 // Напишіть функцію, яка перетворює глибокий масив в одномірний. Не використовувати array.flat()
 // Очікується[1, 2, [3, 4, [5]]] => [1, 2, 3, 4, 5]
+
 
 /* const simpleArr = (array) => {
     return array.reduce((acum, elem) => acum.concat(Array.isArray(elem) ? simpleArr(elem) : elem), []);
@@ -310,8 +318,9 @@ console.log(simpleArr([1, 2, [3, 4, [5]]])); // жестока задачка */
 
 
 
-
+//======Пасхалка==========
 
 /* const scores = [5, 4, 1, 22, 23, 21, 3]
 console.log(scores.concat(777)) */
+
 // виведе  [5, 4, 1, 22, 23, 21, 3, 777]
