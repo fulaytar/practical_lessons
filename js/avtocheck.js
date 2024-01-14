@@ -304,3 +304,96 @@ const greet = customer.sayHello.bind(customer);
 
 greet(); 
  */
+
+/* class Person {
+constructor(mane, women,age_man,age_women,) {
+  this.mane = mane;
+  this.women = women;
+  this.age_man = age_man;
+  this.age_women = age_women;
+  }
+  getInfoMan() {
+    return `Name is ${this.mane}  age ${this.age_man}`
+  }
+  getInfoWomen() {
+    return `Name is ${this.women}  age ${this.age_women}`
+  }
+  changeAgeMan(age) {
+    this.age_man = age;
+  }
+  changeAgeWomen(age) {
+    this.age_women = age;
+  }
+  changeMane(men) {
+    this.mane = men;
+  }
+  changeMane(man) {
+    this.mane = man;
+  }
+  changeWomen(women) {
+    this.women = women;
+  }
+  sumAge() {
+    return this.age_man + this.age_women;
+  }
+  OldMenOrWomen() {
+    return this.age_man>this.age_women?"Чоловік старший":"Дружина старша"
+  }
+}
+// Проверим работу класса Person — создадим объект
+// Чтобы вызвать конструктор, нужно применить к классу ключевое слово new
+const famileJanos = new Person("Іван", "Мар'янка", 23,24);
+console.log(famileJanos);
+console.log(famileJanos.OldMenOrWomen());
+const famileSister = new Person("Вася", "Валерія", 38, 31);
+console.log(famileSister);
+console.log(famileSister.OldMenOrWomen());
+ */
+
+
+
+/* function Person(firstName, lastName) {
+this.firstName = firstName;
+this.lastName = lastName;
+}
+// Добавляем в прототип Person функцию, представляющую собой метод
+Person.prototype.swapNames = function() {
+[this.firstName, this.lastName] = [this.lastName, this.firstName];
+}
+const newPerson = new Person('Luke', 'Takei'); // тут додаємо свою функцію
+newPerson.swapNames();
+console.log(newPerson.firstName); // 'Takei'
+console.log(newPerson);; */
+
+
+
+
+/* class Book {
+constructor(title, author, price, publishedDate) {
+this.title = title;
+this.author = author;
+this.price = price;
+this.publishedDate = publishedDate;
+}
+raisePrice(percent) {
+const increase = this.price*percent;
+this.price += Math.round(increase)/100;
+return this;
+}
+releaseNewEdition() {
+// Записываем в pulishedDate сегодняшнюю дату
+this.publishedDate = new Date();
+return this;
+}
+}
+const book = new Book('I Love Mathematics', 'Adam Up', 15.99,
+new Date(2023, 2, 2));
+// Поднимаем цену на 15 % и меняем дату выхода книги,
+// используя цепочку методов
+console.log(book.raisePrice(15).releaseNewEdition());   // цепочка методів */
+
+
+/* const evens = [2, 4, 6, 8];
+const odds = [1, 3, 5, 7, 9];
+const evensAndOdds = evens.concat(odds).sort();
+console.log(evensAndOdds); */
