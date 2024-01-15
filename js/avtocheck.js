@@ -397,3 +397,40 @@ console.log(book.raisePrice(15).releaseNewEdition());   // цепочка мет
 const odds = [1, 3, 5, 7, 9];
 const evensAndOdds = evens.concat(odds).sort();
 console.log(evensAndOdds); */
+
+/* 
+class User {
+  name;
+  #email;
+
+  constructor({ name, email }) {
+    this.name = name;
+    this.#email = email;
+  }
+
+  // Публічний метод для отримання електронної пошти
+  getEmail() {
+    return this.#email;
+  }
+
+  // Публічний метод для зміни електронної пошти
+  changeEmail(newEmail) {
+    this.#validateEmail(newEmail)? this.#email = newEmail : console.log('Invalid email format');
+  }
+
+  // Приватний метод для валідації електронної пошти
+  #validateEmail(email) {
+    return email.includes('@');
+  }
+}
+
+const mango = new User({
+  name: 'Mango',
+  email: 'mango@mail.com',
+});
+
+// Спробуємо змінити електронну пошту
+mango.changeEmail('newmail.com'); // ehror
+mango.changeEmail('new@mail.com'); // good job
+console.log(mango.getEmail());  //new@mail.com
+ */
