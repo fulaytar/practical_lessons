@@ -434,3 +434,99 @@ mango.changeEmail('newmail.com'); // ehror
 mango.changeEmail('new@mail.com'); // good job
 console.log(mango.getEmail());  //new@mail.com
  */
+
+
+
+/**
+ * Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю і
+ * розраховує та повертає загальну вартість каменів з таким ім'ям, ціною та
+ * кількістю з властивості stones.
+ */
+/* const chopShop = {
+  stones: [
+    { name: "Emerald", price: 1300, quantity: 4 },
+    { name: "Diamond", price: 2700, quantity: 3 },
+    { name: "Sapphire", price: 1400, quantity: 7 },
+    { name: "Ruby", price: 800, quantity: 2 },
+  ],
+  calcTotalPrice(stoneName) {
+    const stone = this.stones.find(element => element.name === stoneName);
+    return ` Ваш камінь ${stoneName} , в наявності ${stone.quantity} за ціною ${stone.price}`
+  },
+};
+
+console.log(chopShop.calcTotalPrice("Emerald")); // 5200
+console.log(chopShop.calcTotalPrice("Diamond")); // 8100
+console.log(chopShop.calcTotalPrice("Sapphire")); // 9800
+console.log(chopShop.calcTotalPrice("Ruby")); // 1600 */
+
+
+
+
+/* const changePortfolio = function (age, job) {
+  this.age = age;
+  this.job = job;
+}
+
+
+const portfolio = {
+  age: 23,
+  job: "teacher of Math"
+}
+
+console.log(portfolio);
+ */
+/* changePortfolio.call(portfolio, 24, "Fullstack Developer"); //тут просто значення
+changePortfolio.apply(portfolio,[24,"Fullstack Developer"]) //потребує масиву 
+console.log(portfolio) */
+/* const newFunc = changePortfolio.bind(portfolio);
+newFunc(40, "developer");
+console.log(portfolio); */
+
+
+
+
+/* const counter = {
+  value: 0,
+
+  increment(value) {
+    console.log("increment -> this", this);
+    this.value += value;
+  },
+
+  decrement(value) {
+    console.log("decrement -> this", this);
+    this.value -= value;
+  },
+};
+
+const updateCounter = function (value, operation) {
+  operation(value);
+};
+
+updateCounter(10, counter.increment.bind(counter));
+updateCounter(5, counter.decrement.bind(counter));
+console.log(counter); */
+
+
+/* const animal = {
+  legs: 4,
+};
+
+const dog = Object.create(animal);
+dog.name = "Mango";
+dog.love = true;
+
+console.log(dog)
+
+console.log(dog.name); 
+console.log(dog.legs);
+console.log(dog.hasOwnProperty("name"));
+console.log(dog.hasOwnProperty("legs"));
+
+for (const key in dog) {
+  if (dog.hasOwnProperty(key)) {
+    console.log(key); // "name"
+  }
+}
+ */
