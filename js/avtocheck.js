@@ -530,3 +530,115 @@ for (const key in dog) {
   }
 }
  */
+
+
+/* const credit = {
+  summ: 20000,
+  month: 12,
+  p: 10000,
+  result() {
+    return this.summ+this.p*this.month
+  }
+}
+
+console.log(credit.result()); */
+
+/* class Bank {
+  static type = "static-bank";
+  constructor(options) {
+    this.summ = options.summ;
+    this.month = options.month;
+    this.p = options.p;
+  }
+  credit() {
+    return this.summ+this.p*this.month
+  }
+} */
+
+/* const userBank = new Bank({
+  summ: 30000,
+  month: 5,
+  p:500,
+})
+console.log(userBank);
+console.log(userBank.credit());
+console.log(Bank.type); */
+
+
+/* class NewBank extends Bank { //extends копіює клас
+  constructor(options) {
+    super(options)           //без "super" властивості ерор
+    this.card = options.card;
+  }
+}
+
+const Aval = new NewBank({
+  summ: 20000,
+  month: 5,
+  p: 500,
+  card: true,
+});
+
+console.log(Aval);
+console.log(Aval.card);
+console.log(Aval.credit()); */
+
+
+
+
+
+/* class User {
+  constructor(props) {
+    this.name = props.name;
+    this.age = props.age;
+    this.city = props.city;
+  }
+  firstName = "";
+  lastName = "";
+  age = "";
+  city = "";
+  set name(newName) {
+    const nameRow = newName.split(" ");
+    this.firstName = nameRow[0];
+    this.lastName = nameRow[1];
+  }
+  get name() {
+    return `First name : ${this.firstName} last name :${this.lastName}`
+  }
+  set age(newAge) {
+    this.age = newAge;
+  }
+  get age() {
+    return this.age;
+  }
+  set city(newSity) {
+    this.city = newSity;
+  }
+  get city() {
+    return this.city;
+  }
+}
+
+const Ivan = new User({
+  name: "Ivan Stepanowich",
+  age: 23,
+  city:"Lviv"
+});
+console.log(Ivan);
+
+
+const Mary = new User({
+  name: "Mary Happy",
+  age: 20,
+  city:"Odessa"
+})
+console.log(Mary);*/
+
+
+//[[PTOTOTYPE]]
+/* const a = {
+  x: 1,
+  y:3,
+}
+const b = Object.create(a);
+ */
