@@ -642,3 +642,104 @@ console.log(Mary);*/
 }
 const b = Object.create(a);
  */
+
+/* class User{
+  constructor(username,age,city) {
+    console.log('Hello, I am constructor', username);
+    this.name = username;
+    this.age = age;
+    this.city = city;
+  }
+  sauHello() {
+    console.log("Hello World")
+  }
+  login() {
+    console.log("User logged in")
+  }
+} */
+
+//User.sayHello();
+//  ===так не працює====
+
+
+/* const user = new User("Ivan", 23,"Lviv");
+const user2 = new User("Dima",45,"Odessa");
+const user3=new User("Mary",19,"Dream")
+console.log(user)
+console.log(user2)
+console.log(user3)  */
+//user.sauHello()
+// ===ось  так працює===
+
+/* class Rectangle{
+  #a;
+  #b;
+  static value = 0;
+  static printAllRectangles() {
+    console.log(Rectangle.value);
+  }
+  constructor(a, b) {
+    this.#a = a;
+    this.#b = b;
+    Rectangle.value++;
+  }
+  get P() {
+    return (this.#a+this.#b)*2
+  }
+  get S() {
+    return this.#a*this.#b
+  }
+  getA() {
+    return this.#a;
+  }
+  setA(newValue) {
+    if (newValue > 0) {
+      this.#a = newValue;
+    }
+  }
+  get a(){
+      return this.#a;
+    }
+}
+
+const r1 = new Rectangle(2, 4);
+const r2 = new Rectangle(3, 5);
+console.log(r1.getA())//2
+r1.setA(9)
+console.log(r1.getA())//9
+r1.setA(-5);
+console.log(r1.getA())//9
+console.log(r1.a) // це уже через гетер, зручно
+console.log(Rectangle.value); //через клас до класу 
+console.log(Rectangle.value);//а був 0 ...
+console.log(Rectangle.printAllRectangles());// а тепер так, рахуємо кількість екземплярів */
+
+
+
+
+//=======Наслідування класів======
+
+/* class Transport{
+  color;
+
+  constructor(color) {
+    this.color = color;
+  }
+  startEngine() {
+    console.log("Engine start");
+  }
+}
+
+class Car extends Transport{  //успадковує клас
+  model;
+  constructor(color, model) {
+    super(color);        //успадковує колор
+    this.model = model;
+  }
+}
+
+const car = new Car("green","bmw");
+console.log(car)
+car.startEngine(); */
+
+
