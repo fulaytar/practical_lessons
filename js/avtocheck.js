@@ -742,4 +742,51 @@ const car = new Car("green","bmw");
 console.log(car)
 car.startEngine(); */
 
+const list = document.querySelector(".list");
+
+const heading = document.createElement("li");
+heading.classList.add("елемент-батька-ul-append");
+heading.textContent = "Мій перший код через JS";
+heading.style.color = "red";
+console.log(heading);
+list.append(heading);
+
+
+const head_2 = document.createElement("li");
+head_2.classList.add("елемент-батька-ul-prepend");
+head_2.textContent = " My second code";
+head_2.style.color = "purple";
+list.prepend(head_2);
+console.log(head_2);
+
+const li_1 = document.createElement("li");
+li_1.classList.add("піcля-елемента-ul");
+li_1.textContent = "hello , i am li";
+li_1.style.color = "green"
+list.after(li_1);
+console.log(li_1);
+
+const li_2 = document.createElement("li");
+li_2.classList.add("перед-елемента-ul");
+li_2.textContent = "hello , i am li-2";
+li_2.style.color = "blue"
+list.before(li_2);
+console.log(li_2);
+
+const del_p = document.querySelector(".del_item");
+console.log(del_p)
+del_p.remove();
+
+
+
+const list2 = document.querySelector(".list-2");
+const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+
+const markup = technologies
+  .map((technology) => `<li class="list-item">${technology}</li>`)
+  .join("");
+// Check the console, you'll see a single string with HTML tags
+console.log(markup);
+// Adding all the markup in one operation
+list2.innerHTML = markup;
 
