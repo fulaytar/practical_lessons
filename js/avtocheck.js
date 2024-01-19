@@ -790,3 +790,16 @@ console.log(markup);
 // Adding all the markup in one operation
 list2.innerHTML = markup;
 
+
+// задачка яка рахує кількість кліків на кнопку і виводить у консоль
+let a = 0; 
+const clickHandler = (event) => {
+    a++;
+  console.log(`Ти зробив клік, аж ${a} разів`)
+
+};
+// навішуєте на кнопку
+const btn = document.getElementById('click-button');
+
+btn.addEventListener('click', clickHandler);
+//запускаємо і давим на 'click'
