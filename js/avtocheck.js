@@ -803,3 +803,58 @@ const btn = document.getElementById('click-button');
 
 btn.addEventListener('click', clickHandler);
 //запускаємо і давим на 'click'
+
+const primer = document.querySelector(".primer");
+console.log(primer);
+primer.textContent = "Тут я зробив таке через innerHTML";
+console.log(list.textContent);
+primer.innerHTML += " а також можна зробити таке";
+
+/* // Функція для видалення обробника подій
+const removeClickHandler = () => {
+  btn.removeEventListener('click', clickHandler);
+  console.log('Обробник події був видалений');
+};
+
+// Навішуєте на другу кнопку для видалення обробника події
+const removeBtn = document.getElementById('del-btn');
+removeBtn.addEventListener('click', removeClickHandler); */
+
+
+// Відловлюю кнопку
+const redBtn = document.getElementById("del-btn");
+console.log(redBtn);
+
+// Ліплю функцію
+const redClick = () => {
+  console.log("Активовано почервоніння на 2 секунди");
+  btn.style.backgroundColor = "red";
+  btn.style.border = "none";
+  btn.innerHTML = "I am red button";
+
+  // Встановлюю таймер на 2 секунди (2000 мілісекунд)
+  setTimeout(() => {
+    // Після 2 секунд повертаю стилі до початкових
+    btn.style.backgroundColor = "";  // Початковий колір (залишаю порожнім для використання значення за замовчуванням)
+    btn.style.border = "";
+    btn.innerHTML = "Нажми на мене";
+  }, 2000);
+}
+
+// Додаю подію
+redBtn.addEventListener("click", redClick);
+
+
+//А тепер відслідковуємо клавіші
+
+// Функція для виведення повідомлення в консоль
+let message = "";
+const handleKeyPress = (event) => {
+  message += event.key;
+  console.log(message);
+  
+};
+
+// Додаємо прослуховувач подій до документу
+document.addEventListener('keydown', handleKeyPress);
+
