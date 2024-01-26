@@ -886,7 +886,7 @@ console.log(input); */
   console.log(event.target.value)
 }) */
 
-const form = document.querySelector('.js-form');
+/* const form = document.querySelector('.js-form');
 console.log(form);
 function chandeInfo(event) {
   event.preventDefault();
@@ -897,4 +897,19 @@ function chandeInfo(event) {
   }
   console.log(InfoDetail);
 }
-form.addEventListener("submit", chandeInfo);
+form.addEventListener("submit", chandeInfo); */
+
+/* const pressKey=document.querySelector(".pressKey")
+pressKey.style.color = "red";
+pressKey.style.fontSize = "72px";
+
+function keyHandlrer(event) {
+  pressKey.textContent = event.key;
+}
+
+function keyUp(event) {
+  pressKey.textContent = event.key;
+}
+
+document.addEventListener("keydown", keyHandlrer);
+document.addEventListener("keyup", keyUp); */
