@@ -742,7 +742,7 @@ const car = new Car("green","bmw");
 console.log(car)
 car.startEngine(); */
 
-const list = document.querySelector(".list");
+/* const list = document.querySelector(".list");
 
 const heading = document.createElement("li");
 heading.classList.add("елемент-батька-ul-append");
@@ -784,32 +784,32 @@ const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
 
 const markup = technologies
   .map((technology) => `<li class="list-item">${technology}</li>`)
-  .join("");
+  .join(""); */
 // Check the console, you'll see a single string with HTML tags
-console.log(markup);
+/* console.log(markup); */
 // Adding all the markup in one operation
-list2.innerHTML = markup;
+/* list2.innerHTML = markup; */
 
 
 // задачка яка рахує кількість кліків на кнопку і виводить у консоль
-let a = 0; 
+/* let a = 0; 
 const clickHandler = (event) => {
     a++;
   console.log(`Ти зробив клік, аж ${a} разів`)
 
-};
+}; */
 // навішуєте на кнопку
-const btn = document.getElementById('click-button');
+/* const btn = document.getElementById('click-button');
 
-btn.addEventListener('click', clickHandler);
+btn.addEventListener('click', clickHandler); */
 //запускаємо і давим на 'click'
 
-const primer = document.querySelector(".primer");
+/* const primer = document.querySelector(".primer");
 console.log(primer);
 primer.textContent = "Тут я зробив таке через innerHTML";
 console.log(list.textContent);
 primer.innerHTML += " а також можна зробити таке";
-
+ */
 /* // Функція для видалення обробника подій
 const removeClickHandler = () => {
   btn.removeEventListener('click', clickHandler);
@@ -821,7 +821,7 @@ const removeBtn = document.getElementById('del-btn');
 removeBtn.addEventListener('click', removeClickHandler); */
 
 
-// Відловлюю кнопку
+/* // Відловлюю кнопку
 const redBtn = document.getElementById("del-btn");
 console.log(redBtn);
 
@@ -858,3 +858,43 @@ const handleKeyPress = (event) => {
 // Додаємо прослуховувач подій до документу
 document.addEventListener('keydown', handleKeyPress);
 
+ */
+
+/* const btn = document.getElementById('click-button');
+const body = document.querySelector('body')
+
+console.log(body);
+let index = 20;
+function hendler() {
+  btn.style.marginLeft = `${index}px`
+  btn.style.marginTop = `${index}px`
+  index += 10;
+  console.log(index);
+}
+
+btn.addEventListener("click", hendler); */
+
+/* const input = document.getElementById("input");
+console.log(input); */
+/* input.addEventListener("blur", ()=>{
+  alert(`Привіт мій хазяїн ${input.value}`);
+}) */
+/* input.addEventListener("input", () => {
+  console.log(input.value);
+}) */
+/* input.addEventListener("click", (event) => {
+  console.log(event.target.value)
+}) */
+
+const form = document.querySelector('.js-form');
+console.log(form);
+function chandeInfo(event) {
+  event.preventDefault();
+  const InfoDetail = {
+    email: event.target.email.value,
+    password: event.target.password.value,
+    comment: event.target.comment.value,
+  }
+  console.log(InfoDetail);
+}
+form.addEventListener("submit", chandeInfo);
