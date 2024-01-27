@@ -916,31 +916,41 @@ document.addEventListener("keyup", keyUp); */
 
 const parent = document.querySelector(".parent"),
   child = document.querySelector(".child"),
-  item = document.querySelector(".item");
+  item = document.querySelector(".item"),
+  parentText = document.querySelector(".parent_text"),
+  itemText = document.querySelector(".item_text"),
+  childText = document.querySelector(".child_text");
+
 
 function greenEnterParent() {
   parent.style.backgroundColor = "#90ff20";
   console.log("Вітаю, ти знайшов батька!")
+  parentText.textContent="Батя все бачить"
 }
 function leaveParent() {
   parent.style.backgroundColor = "";
   console.log("Ти покинув батька...")
+  parentText.textContent="Батя"
 }
 function yellowChild() {
   child.style.backgroundColor = "#ffff20"
   console.log("Вітаю, ти знайшов дитину!")
+  childText.textContent="Дитина бачить тебе"
 }
 function leaveChild() {
   child.style.backgroundColor = "";
   console.log("Ти покинув дитину...")
+  childText.textContent="Дитина"
 }
 function redItem() {
   item.style.backgroundColor = "#ff2020";
   console.log("Вітаю, ти знайшов item!");
+  itemText.textContent="Item see you"
 }
 function leaveItem() {
   item.style.backgroundColor = "";
   console.log("Ти покинув item...");
+  itemText.textContent="Item"
 }
 
 parent.addEventListener("mouseenter", greenEnterParent);
@@ -951,3 +961,4 @@ child.addEventListener("mouseleave", leaveChild)
 
 item.addEventListener("mouseenter", redItem);
 item.addEventListener("mouseleave", leaveItem);
+
