@@ -913,3 +913,41 @@ function keyUp(event) {
 
 document.addEventListener("keydown", keyHandlrer);
 document.addEventListener("keyup", keyUp); */
+
+const parent = document.querySelector(".parent"),
+  child = document.querySelector(".child"),
+  item = document.querySelector(".item");
+
+function greenEnterParent() {
+  parent.style.backgroundColor = "#90ff20";
+  console.log("Вітаю, ти знайшов батька!")
+}
+function leaveParent() {
+  parent.style.backgroundColor = "";
+  console.log("Ти покинув батька...")
+}
+function yellowChild() {
+  child.style.backgroundColor = "#ffff20"
+  console.log("Вітаю, ти знайшов дитину!")
+}
+function leaveChild() {
+  child.style.backgroundColor = "";
+  console.log("Ти покинув дитину...")
+}
+function redItem() {
+  item.style.backgroundColor = "#ff2020";
+  console.log("Вітаю, ти знайшов item!");
+}
+function leaveItem() {
+  item.style.backgroundColor = "";
+  console.log("Ти покинув item...");
+}
+
+parent.addEventListener("mouseenter", greenEnterParent);
+parent.addEventListener("mouseleave", leaveParent);
+
+child.addEventListener("mouseenter", yellowChild)
+child.addEventListener("mouseleave", leaveChild)
+
+item.addEventListener("mouseenter", redItem);
+item.addEventListener("mouseleave", leaveItem);

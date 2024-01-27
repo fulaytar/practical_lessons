@@ -1,0 +1,14 @@
+.parent, .child, .item{
+    display: block;
+    padding:30px;
+    border: 2px solid darkslateblue;
+max-width: 350px;
+transition: background-color 200ms ease-in;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
