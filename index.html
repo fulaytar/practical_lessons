@@ -36,14 +36,27 @@
       <button class="form-button">Submit</button>
     </form>
     <p>Ти натиснув клавішу <span class="pressKey"></span></p> -->
-    <div class="parent">
+    <!--     <div class="parent">
       <p class="parent_text">Батя</p>
       <div class="child">
         <p class="child_text">Дитина</p>
         <div class="item"><p class="item_text">Item</p></div>
       </div>
-    </div>
+    </div> -->
     <!--  <button type="button" id="del-btn">Зроби кнопку червоною попередню</button> -->
+    <form id="form">
+      <label for="name">Ім'я</label>
+      <input type="text" id="name" />
+      <label for="surname">Прізвище</label>
+      <input type="text" id="surname" />
+      <label>Вам є 18?</label>
+      <input type="radio" name="radio" onchange="check()" />
+      Так
+      <input type="radio" name="radio" onchange="check()" />
+      Ні
+
+      <button type="submit">Відправити</button>
+    </form>
     <script src="./js/lesson_1.js"></script>
     <script src="./js/avtocheck.js"></script>
   </body>

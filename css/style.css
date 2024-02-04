@@ -10,3 +10,12 @@ text-align: center;
 .parent{
     margin: 0 auto;
 }
+#name{
+display: block;
+}
+#surname{
+    display: block;
+}
+button{
+    display: block;
+}

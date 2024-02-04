@@ -914,7 +914,7 @@ function keyUp(event) {
 document.addEventListener("keydown", keyHandlrer);
 document.addEventListener("keyup", keyUp); */
 
-const parent = document.querySelector(".parent"),
+/* const parent = document.querySelector(".parent"),
   child = document.querySelector(".child"),
   item = document.querySelector(".item"),
   parentText = document.querySelector(".parent_text"),
@@ -960,5 +960,40 @@ child.addEventListener("mouseenter", yellowChild)
 child.addEventListener("mouseleave", leaveChild)
 
 item.addEventListener("mouseenter", redItem);
-item.addEventListener("mouseleave", leaveItem);
+item.addEventListener("mouseleave", leaveItem); */
 
+/* localStorage.setItem("name", "Ivanko");
+const name = localStorage.getItem("name");
+console.log(name);
+
+localStorage.setItem("surname", "Fulaitar")
+const surname = localStorage.getItem("surname");
+console.log(surname); */
+let age;
+function check() {
+  let age = document.getElementsByName("radio");
+  if (age[0].checked) {
+    return age = true;
+  } else {
+    return age = false;
+  }
+}
+const name = document.getElementById('name');
+const surname = document.getElementById('surname');
+const btn = document.querySelector('button');
+const form = document.getElementById('form');
+
+btn.addEventListener("click", saveInfo);
+
+function saveInfo(event) {
+  event.preventDefault();
+  const info = {
+    name: name.value,
+    surname: surname.value,
+    validAge: check(),
+  }
+  localStorage.setItem("info", JSON.stringify(info));
+  form.reset();
+}
+let info = localStorage.getItem("info");
+console.log(JSON.parse(info))
