@@ -995,5 +995,79 @@ function saveInfo(event) {
   localStorage.setItem("info", JSON.stringify(info));
   form.reset();
 }
-let info = localStorage.getItem("info");
-console.log(JSON.parse(info))
+
+/* const values = ["viktor",undefined,9,null,true,"sex"];
+
+const jsonString = JSON.stringify(values);
+console.log(JSON.parse(jsonString)); */
+
+/* function cleanLocalStorage() {
+  localStorage.clear();
+} */
+
+/* const json = {
+  age: 12,
+  name: "petro"
+};
+
+const jsonData = JSON.stringify(json);
+console.log(jsonData)
+
+localStorage.setItem("test", jsonData);
+console.log(JSON.parse(jsonData)); */
+
+
+
+
+//рішення від Макса
+const forms = document.querySelector(".form-task");
+
+
+/* function dataForm(forms) {
+  const message = forms.message.value;
+  const name = forms.name.value;
+  return {
+    name,
+    message
+    
+  }
+}
+
+forms.addEventListener("input", (event) => {
+  event.preventDefault();
+  const data = dataForm(event.currentTarget)
+  console.log(data)
+
+  const dataJson = JSON.stringify(data);
+  localStorage.setItem("key", dataJson);
+});
+
+const rowData = localStorage.getItem("key");
+if (rowData) {
+  const data = JSON.parse(rowData);
+  forms.message.value = data.message;
+  forms.name.value = data.name;
+
+} */
+
+
+
+//мій варіант
+forms.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const info = {
+    name: forms.name.value,
+    message: forms.message.value
+  };
+  const jsonInfo = JSON.stringify(info);
+  localStorage.setItem("info", jsonInfo);
+  forms.reset();
+})
+
+const data = localStorage.getItem("info");
+  const rowData = JSON.parse(data);
+  console.log(rowData);
+  if (rowData) {
+    forms.name.value = rowData.name;
+    forms.message.value = rowData.message;
+  }
