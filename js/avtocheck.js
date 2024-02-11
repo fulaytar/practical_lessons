@@ -1053,7 +1053,7 @@ if (rowData) {
 
 
 //мій варіант
-forms.addEventListener("submit", (event) => {
+/* forms.addEventListener("submit", (event) => {
   event.preventDefault();
   const info = {
     name: forms.name.value,
@@ -1070,4 +1070,4 @@ const data = localStorage.getItem("info");
   if (rowData) {
     forms.name.value = rowData.name;
     forms.message.value = rowData.message;
-  }
+  } */
