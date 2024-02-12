@@ -969,7 +969,7 @@ console.log(name);
 localStorage.setItem("surname", "Fulaitar")
 const surname = localStorage.getItem("surname");
 console.log(surname); */
-let age;
+/* let age;
 function check() {
   let age = document.getElementsByName("radio");
   if (age[0].checked) {
@@ -994,7 +994,7 @@ function saveInfo(event) {
   }
   localStorage.setItem("info", JSON.stringify(info));
   form.reset();
-}
+} */
 
 /* const values = ["viktor",undefined,9,null,true,"sex"];
 
@@ -1020,7 +1020,7 @@ console.log(JSON.parse(jsonData)); */
 
 
 //рішення від Макса
-const forms = document.querySelector(".form-task");
+/* const forms = document.querySelector(".form-task"); */
 
 
 /* function dataForm(forms) {
@@ -1071,3 +1071,14 @@ const data = localStorage.getItem("info");
     forms.name.value = rowData.name;
     forms.message.value = rowData.message;
   } */
+
+/* const hello = setInterval(hellos, 3000);
+let a = 0;
+function hellos() {
+  if (a === 3) {
+      clearInterval(hello)
+  }
+  alert(`я тебе бачу ${a} прикинь`);
+  a++;
+}
+ */
