@@ -1092,3 +1092,79 @@ for (let i = 0; i < 100000; i++){
 let end = new Date();
 alert (`Цикл відпрацював за ${end-start} мілісекунд`) */
 
+
+
+
+
+/* //всередині функції запит, зовні обробка
+const list = document.querySelector('.todo-list');
+const fetchTodos = () => {
+  const promise = fetch('https://jsonplaceholder.typicode.com/todos');
+  //callback який приймає проміс
+  //дані у форматі джейсон
+  const response =promise.then(response => response.json())
+  //.json() повертає ПРОМІС!
+  const json=response.then(data=>console.log(data))
+  
+}
+
+fetchTodos() */
+
+// тепер як реально роблять
+
+/* fetch('https://jsonplaceholder.typicode.com/todos').then(response => {
+  //if !==200
+  if (!response.ok) {
+    throw new Error(`Response error with status --${response.status}`)
+  }
+
+  return response.json();
+})
+  .then(data => {
+    console.log(data);
+    let html = "";
+    data.map(element => {
+      html += `<li>${element.title}</li>`
+    });
+
+    list.innerHTML = html;
+
+
+  })
+  .catch(error => {
+  alert('Incorrect request!')
+}) */
+
+
+//тут ти зробив фотки
+
+
+/* const list = document.querySelector('.todo-list');
+
+const pixabayKey = '42512842-e518c28c0b42a0fb4c46a85d3';
+
+const BASE_URL = 'https://pixabay.com/api/';
+
+const query = 'modern+cars';
+
+const LINK = `${BASE_URL}?key=${pixabayKey}&q=${query}`;
+
+function getImages() {
+  return fetch(LINK)
+    .then(response => {
+      if (!response.ok) {
+      throw new Error('Image error!')
+      }
+      
+      return response.json();
+    }).catch(error => {
+    alert(`Error request with Pixabay`)
+  })
+}
+getImages().then(data => {
+  const images = data.hits.slice(0, 3);
+  
+  list.innerHTML = images.map(({ webformatURL }) => {
+    return `<li><img src="${webformatURL}"></li>`
+  }).join('');
+}) */
