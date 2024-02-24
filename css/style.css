@@ -60,3 +60,9 @@ button{
 .timer-item span:last-child {
     font-size: 0.8em;
 }
+.todo-list{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    list-style-type: none;
+}

@@ -1168,3 +1168,43 @@ getImages().then(data => {
     return `<li><img src="${webformatURL}"></li>`
   }).join('');
 }) */
+
+const list = document.querySelector('.todo-list');
+let marcup = "";
+
+const apiUrl="https://65d7a28e27d9a3bc1d7b87ac.mockapi.io/api/v1/"
+
+function getInfo() {
+  return fetch(apiUrl + "users").then((res) => 
+    //тут буде об'єкт класу Response
+    //console.log(res);
+    //.json() повертає проміс
+    res.json()
+  ).then((data) => {
+    //тут отримуємо всі дані
+    console.log(data)
+    for (const user of data) {
+      marcup += `<li>
+      <p>${user.name}</p>
+      <img src="${user.avatar}" id='${user.id}'/>
+      </li>`
+    }
+    list.innerHTML = marcup;
+  })
+}
+//тут  отримали інфу
+getInfo()
+
+function getInfoById(id) {
+  return fetch(`${apiUrl}users/${id}`).then((response) => response.json())
+  .then((data)=>console.log(data))
+}
+
+getInfoById(1)
+getInfoById(2)
+//POST створює елемент
+
+
+
+
+
