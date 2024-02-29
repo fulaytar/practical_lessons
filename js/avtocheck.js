@@ -1169,6 +1169,11 @@ getImages().then(data => {
   }).join('');
 }) */
 
+
+
+//=============================
+/* 
+
 const list = document.querySelector('.todo-list');
 let marcup = "";
 
@@ -1203,7 +1208,7 @@ function getInfoById(id) {
 getInfoById(1)
 getInfoById(2)
 //POST створює елемент
-
+ */
 
 
 
