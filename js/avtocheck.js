@@ -1210,6 +1210,132 @@ getInfoById(2)
 //POST створює елемент
  */
 
+/* 
+console.log("Start")
+
+let q = {};
+try {
+  throw new Error('error')
+} catch (error){
+  console.log("no method", error.name)
+  //error.name
+  //error.message
+  //error.stack  -  глибинно описує помилку
+} finally {
+  console.log("finnaly")
+}
+
+console.log("End") */
 
 
 
+/* function getPokemon() {
+  const url = 'https://pokeapi.co/api/v2/pokemon/ditto3';
+ return  fetch(url).then(response => {
+   if (!response.ok) {
+      throw new Error("Some  error in request. Check url!")
+   }
+   return response.json();
+  })
+}
+getPokemon().then(data=>console.log(data)).catch(error=>console.log("check url",error)) */
+
+
+//async створює проміс
+/* async function fetchTodos() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+  if (!response.ok) {
+    throw new Error("Problem!")
+  }
+  const data = await response.json();
+  return data;
+}
+console.log(fetchTodos())
+
+fetchTodos().then(data=>console.log(data)).catch(error=> console.log("New Error --",error.message)) */
+
+//функція покемони
+/* const form = document.querySelector('#form');
+const loader = document.querySelector('div');
+const cardContainer = document.querySelector('.card-container');
+
+async function fetchPokemon(pokemonId) {
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+  return await response.json();
+}
+
+form.addEventListener("submit", onSearch);
+
+function onSearch(e) {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const searchQuery = form.elements.input.value;
+
+  fetchPokemon(searchQuery)
+    .then(renderPokemonCard)
+    .catch(onFetchError)
+    .finally(() => form.reset())
+}
+
+function renderPokemonCard({ name, sprites, weight, height, abilities }) {
+  const abilityListItems = abilities
+    .map((ability) => `<li class="list-group-item">${ability.name}</li>`)
+    .join("");
+
+  const markup = `<div class="card">
+   <div class="card-img-top">
+     <img src="${sprites.front_default}" alt="${name}">
+   </div>
+   <div class="card-body">
+     <h2 class="card-title">Ім'я: ${name}</h2>
+     <p class="card-text">Вага: ${weight}</p>
+     <p class="card-text">Зростання: ${height}</p>
+
+     <p class="card-text"><b>Уміння</b></p>
+     <ul class="list-group">${abilityListItems}</ul>
+   </div>
+</div>`;
+  cardContainer.innerHTML = markup;
+}
+
+function onFetchError(error) {
+  alert("Упс, щось пішло не так і ми не знайшли вашого покемона!");
+} */
+
+//ASIOS
+//базовий юрл
+//axios.defaults.baseURL = 'https://65d7a28e27d9a3bc1d7b87ac.mockapi.io/';
+//обробка
+/* function fetchBooks() {
+  return axios.get('/books').then(response=>console.log(response.data))
+} */
+
+//fetchBooks()
+
+/* function fetchBooksById(id) {
+  return axios.get(`/books/${id}`).then((response)=>console.log(response.data))
+} */
+
+//fetchBooksById(3);
+/* function addNewBook(data) {
+  axios.post('/books', data).then(response => console.log(response.data));
+} */
+
+/* addNewBook({
+  name: "Ivan",
+  author:'Avtor'
+})
+fetchBooks() */
+
+/* function updateBookById(update, bookId) {
+  axios.put(`/books/${bookId}`,update).then(response=>console.log(response.data))
+} */
+
+/* updateBookById({ name: "Carlos" }, 25); */
+/* 
+function deleteBook(bookId) {
+  axios.delete(`/books/${bookId}`)
+}
+
+deleteBook(27); */
